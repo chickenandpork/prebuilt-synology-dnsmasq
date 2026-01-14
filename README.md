@@ -12,5 +12,6 @@ propagate that respect for Simon Kelley's request.
 ## Build
 
 It should be simply:
+
 0. you have bazelisk installed as "bazel" in your path.
 1. bazel build //...
