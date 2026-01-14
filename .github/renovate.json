@@ -1,0 +1,43 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended"
+  ],
+  "labels": [
+    "dependencies"
+  ],
+  "packageRules": [
+    {
+      "enabled": true,
+      "groupName": "Go module updates",
+      "matchFileNames": [
+        "**/go.mod"
+      ],
+      "matchManagers": [
+        "gomod"
+      ]
+    },
+    {
+      "enabled": true,
+      "groupName": "Bazel module updates",
+      "matchFileNames": [
+        "**/MODULE.bazel"
+      ],
+      "matchManagers": [
+        "bazel",
+        "bazel-module"
+      ]
+    },
+    {
+      "automerge": true,
+      "matchUpdateTypes": [
+        "patch",
+        "minor"
+      ]
+    }
+  ],
+  "postUpdateOptions": [
+    "gomodMassage",
+    "gomodTidy"
+  ]
+}
