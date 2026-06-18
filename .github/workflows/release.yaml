@@ -39,7 +39,7 @@ jobs:
           repository-cache: true
       -
         name: Clone Repo
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
       -
         name: Canonicalize Parameters
         id: params
